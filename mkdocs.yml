@@ -1,0 +1,68 @@
+# Site information
+site_name: MetaTube
+site_url: https://metatube-community.github.io/
+site_author: MetaTube Community
+site_description: MetaTube User Manual & Wiki
+
+# Repository
+repo_name: MetaTube
+repo_url: https://github.com/metatube-community/
+edit_uri: https://github.com/metatube-community/metatube-community.github.io/blob/main/docs/
+
+# Copyright as footer description
+copyright: Developed and maintained by MetaTube members with ❤️
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: blue
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: blue
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  features:
+    - navigation.top
+    - navigation.sections
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+  logo: images/logo-vertical-dark.png
+  favicon: favicon.ico
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - pymdownx.tilde
+
+# Extra settings
+extra:
+  # generator: false
+  analytics:
+    provider: cloudflare
+    property: !ENV CLOUDFLARE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/metatube-community
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/r/metatube/metatube-server
+
+# Page tree
+# nav:
+#   - MetaTube: README.md
+#   - Wiki:
+#     - wiki/README.md
